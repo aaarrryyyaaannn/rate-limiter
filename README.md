@@ -1,31 +1,28 @@
 # Rate Limiter Lab
 
-A comprehensive collection of rate limiting algorithms implemented from scratch using Node.js and Redis.
+A collection of rate limiting algorithms implemented from scratch using Node.js, Redis and Lua Scripts.
 
-This repository explores how modern API gateways and backend systems protect services from abuse, traffic spikes, and resource exhaustion.
-
-The goal of this project is not only to implement rate limiting algorithms but also to understand their trade-offs, performance characteristics, memory usage, fairness, and behavior in distributed systems.
+The purpose of this repository is to understand how modern backend systems handle traffic control, request throttling and distributed rate limiting.
 
 ---
 
-## Algorithms Implemented
+## Implemented Algorithms
 
 ### Basic Implementations
 
 * Fixed Window Counter
-* Sliding Window Log
-* Sliding Window Counter
+* Sliding Window
 * Token Bucket
 * Leaky Bucket
 
-### Advanced Redis Implementations
+### Advanced Redis + Lua Implementations
 
 * Token Bucket using Redis Lua Scripts
 * Leaky Bucket using Redis Lua Scripts
 
 ---
 
-## Technologies Used
+## Tech Stack
 
 * Node.js
 * Express.js
@@ -35,20 +32,19 @@ The goal of this project is not only to implement rate limiting algorithms but a
 
 ---
 
-## Why This Repository?
+## Why This Project?
 
-Most applications use rate limiting libraries without understanding the underlying algorithms.
+Most developers use rate limiting libraries without understanding how they work internally.
 
-This repository implements the internals from scratch to understand:
+This project focuses on implementing the underlying algorithms from scratch and understanding:
 
 * Request throttling
-* Burst handling
-* Fairness
-* Atomic operations
-* Distributed systems concerns
+* Burst traffic handling
+* Traffic shaping
 * Redis data structures
+* Atomic operations
+* Race conditions
 * Lua scripting
-* Performance optimization
 
 ---
 
@@ -57,83 +53,41 @@ This repository implements the internals from scratch to understand:
 ```text
 rate-limiter-lab
 |
-├── basic
-│   ├── fixed-window
-│   ├── sliding-window-log
-│   ├── sliding-window-counter
-│   ├── token-bucket
-│   └── leaky-bucket
+├── fixed-window
+├── sliding-window
+├── token-bucket
+├── leaky-bucket
 |
 ├── advanced
 │   ├── token-bucket-lua
 │   └── leaky-bucket-lua
 |
-├── benchmarks
-│
 ├── README.md
 └── BENCHMARKS.md
 ```
 
 ---
 
-## Concepts Explored
-
-### Redis Data Structures
-
-* Strings
-* Hashes
-* Sorted Sets
-
-### Redis Features
-
-* Expiration (TTL)
-* Pipelines
-* Lua Scripting
-
-### Distributed Systems Concepts
-
-* Atomic Operations
-* Race Conditions
-* Concurrent Requests
-* Distributed Rate Limiting Foundations
-
----
-
-## Lua Script Based Rate Limiting
-
-The advanced implementations move the complete algorithm execution into Redis.
-
-Benefits:
-
-* Atomic execution
-* Reduced network round trips
-* Race condition elimination
-* Better scalability
-* Production-oriented design
-
----
-
-## Future Work
-
-* Distributed Token Bucket
-* Distributed Leaky Bucket
-* Sliding Window Lua Implementation
-* Redis Cluster Support
-* Benchmark Dashboard
-* Load Testing using Autocannon
-
----
-
 ## Learning Outcomes
 
-Through this repository I explored:
+Through this project I explored:
 
-* Redis internals
-* Caching patterns
-* Distributed systems fundamentals
-* Lua scripting
+* Redis fundamentals
+* Rate limiting algorithms
+* Distributed systems basics
+* Redis Lua scripting
+* Atomic operations
 * Backend performance engineering
-* API gateway concepts
+
+---
+
+## Future Enhancements
+
+* Sliding Window Log
+* Sliding Window Counter
+* Distributed Rate Limiter
+* Redis Cluster Integration
+* Load Testing & Benchmarking
 
 ---
 
@@ -141,4 +95,4 @@ Through this repository I explored:
 
 Aryan Devkar
 
-Backend Engineering • Distributed Systems • Redis • Node.js
+Backend Engineering • Redis • Node.js • Distributed Systems
