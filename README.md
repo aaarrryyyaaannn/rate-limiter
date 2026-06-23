@@ -58,7 +58,7 @@ rate-limiter-lab
 ├── token-bucket
 ├── leaky-bucket
 |
-├── advanced
+├── advance
 │   ├── token-bucket-lua
 │   └── leaky-bucket-lua
 |
